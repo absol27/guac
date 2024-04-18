@@ -61,6 +61,7 @@ const (
 	DocumentJsonLines        DocumentType = "JSON_LINES"
 	DocumentScorecard        DocumentType = "SCORECARD"
 	DocumentCycloneDX        DocumentType = "CycloneDX"
+	DocumentBuildInfo        DocumentType = "BUILDINFO"
 	DocumentDepsDev          DocumentType = "DEPS_DEV"
 	DocumentCsaf             DocumentType = "CSAF"
 	DocumentOpenVEX          DocumentType = "OPEN_VEX"

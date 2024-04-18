@@ -31,6 +31,7 @@ import (
 	"github.com/guacsec/guac/pkg/events"
 	"github.com/guacsec/guac/pkg/handler/collector"
 	"github.com/guacsec/guac/pkg/handler/processor"
+	buildinfoProcessor "github.com/guacsec/guac/pkg/handler/processor/buildinfo"
 	"github.com/guacsec/guac/pkg/handler/processor/csaf"
 	"github.com/guacsec/guac/pkg/handler/processor/cyclonedx"
 	"github.com/guacsec/guac/pkg/handler/processor/deps_dev"
@@ -62,6 +63,7 @@ func init() {
 	_ = RegisterDocumentProcessor(&scorecard.ScorecardProcessor{}, processor.DocumentScorecard)
 	_ = RegisterDocumentProcessor(&cyclonedx.CycloneDXProcessor{}, processor.DocumentCycloneDX)
 	_ = RegisterDocumentProcessor(&deps_dev.DepsDev{}, processor.DocumentDepsDev)
+	_ = RegisterDocumentProcessor(&buildinfoProcessor.BuildInfoProcessor{}, processor.DocumentBuildInfo)
 }
 
 func RegisterDocumentProcessor(p processor.DocumentProcessor, d processor.DocumentType) error {
